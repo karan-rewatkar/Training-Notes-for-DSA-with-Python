@@ -50,6 +50,7 @@
 #10
 
 #---------------------------------------------------
+<<<<<<< HEAD
 # class BSTNode:
 #     def __init__(self,data):
 #         self.data       = data
@@ -70,4 +71,26 @@
 # insertNode(newBST,70)
 # insertNode(newBST,50)
 # insertNode(newBST,90)
+=======
+class BSTNode:
+    def __init__(self,data):
+        self.data       = data
+        self.leftchild  = None
+        self.rightchild = None
+
+def insertNode(rootnode,nodevalue):
+    if rootnode.data == None:                       #checks for empty rootnode
+        rootnode.data = nodevalue
+    elif nodevalue <= rootnode.data:                #checks for nodevalue is smaller than rootnode
+        if rootnode.leftchild is None:
+            rootnode.leftchild = BSTNode(nodevalue)
+    else:                                           #checks for nodevalue is greater than rootnode
+        if rootnode.rightchild is None:
+            rootnode.rightchild = BSTNode(nodevalue)
+
+newBST = BSTNode(data)
+insertNode(newBST,70)
+insertNode(newBST,50)
+insertNode(newBST,90)
+>>>>>>> 314e8056e6486458c8a7546f6a20a07fdc911ea5
 
